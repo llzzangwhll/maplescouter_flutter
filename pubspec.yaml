@@ -1,5 +1,5 @@
 name: maplescouter_flutter
-description: "A new Flutter project."
+description: "환산주스탯"
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -34,6 +34,12 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+
+ # GetX
+  get: ^4.7.2
+
+  # WebView
+  webview_flutter_plus: ^0.4.19
 
 dev_dependencies:
   flutter_test:
