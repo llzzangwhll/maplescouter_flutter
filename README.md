@@ -1,16 +1,5 @@
 # maplescouter_flutter
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 환산주스탯 하이브리드 앱
+- 모바일로 항상 웹서치를 통하여 진입을 하기 떄문에 불편해서 환산주스탯 url 기반으로 하이브리드 앱 제작
+- 담당자 분께는 플랫폼 확장에 부담이 있기 때문에 플랫폼 확장은 미정 -> 무단 배포는 절대 금물
