@@ -30,19 +30,15 @@ class MainScreen extends GetView<MainController> {
         backgroundColor: Colors.white,
         resizeToAvoidBottomInset: true,
         body: SafeArea(
-          child: Stack(
-            children: [
-              Container(
-                color: Colors.white,
-                child: WebViewWidget(
-                  controller:
-                      controller.webViewController
-                        ..loadRequest(Uri.parse(controller.url))
-                        ..setJavaScriptMode(JavaScriptMode.unrestricted)
-                        ..enableZoom(false),
-                ),
-              ),
-            ],
+          child: Container(
+            color: Colors.white,
+            child: WebViewWidget(
+              controller:
+                  controller.webViewController
+                    ..loadRequest(Uri.parse(controller.url))
+                    ..setJavaScriptMode(JavaScriptMode.unrestricted)
+                    ..enableZoom(false),
+            ),
           ),
         ),
       ),
