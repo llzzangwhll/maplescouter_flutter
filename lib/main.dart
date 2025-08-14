@@ -24,8 +24,10 @@ class MyApp extends StatelessWidget {
       // 상단 디버그 라벨 출력 x
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.deepPurple,
+          surface: Colors.white,
+        ),
       ),
     );
   }
