@@ -30,54 +30,19 @@ class MainScreen extends GetView<MainController> {
         backgroundColor: Colors.white,
         resizeToAvoidBottomInset: true,
         body: SafeArea(
-          child: Obx(
-            () => Stack(
-              children: [
-                Container(
-                  color: Colors.white,
-                  child: WebViewWidget(
-                    controller:
-                        controller.webViewController
-                          ..loadRequest(Uri.parse(controller.url))
-                          ..setJavaScriptMode(JavaScriptMode.unrestricted)
-                          ..enableZoom(false)
-                          ..setNavigationDelegate(
-                            NavigationDelegate(
-                              /// 페이지 로딩 시작
-                              onPageStarted: (url) {
-                                controller.isLoading.value = true;
-                              },
-
-                              /// 페이지 로딩 끝
-                              onHttpAuthRequest: (request) {
-                                controller.isLoading.value = false;
-                              },
-
-                              /// 에러 발생 시
-                              onWebResourceError: (error) {
-                                controller.isLoading.value = false;
-                              },
-                            ),
-                          ),
-                  ),
+          child: Stack(
+            children: [
+              Container(
+                color: Colors.white,
+                child: WebViewWidget(
+                  controller:
+                      controller.webViewController
+                        ..loadRequest(Uri.parse(controller.url))
+                        ..setJavaScriptMode(JavaScriptMode.unrestricted)
+                        ..enableZoom(false),
                 ),
-                Visibility(
-                  visible: !controller.isLoading.value,
-                  child: Expanded(
-                    child: Container(
-                      color: Colors.white,
-                      child: Center(
-                        child: CircularProgressIndicator(
-                          valueColor: AlwaysStoppedAnimation<Color>(
-                            Colors.deepPurple,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
