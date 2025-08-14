@@ -12,6 +12,7 @@ class MainScreen extends GetView<MainController> {
   @override
   Widget build(BuildContext context) {
     return PopScope(
+      canPop: false,
       onPopInvokedWithResult: (didPop, result) async {
         if (await controller.webViewController.canGoBack()) {
           // WebView 에서 이전 스택이 있으면 뒤로가기 시 스택 제거
